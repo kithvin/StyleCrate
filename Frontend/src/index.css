@@ -1,3 +1,8 @@
 /*  Import Tailwind CSS */
 
 @import "tailwindcss";
+
+@theme{
+    --color-primary : #FF914D; /* Custom primary color */
+    --color-primary-dull : #D88049;
+}
