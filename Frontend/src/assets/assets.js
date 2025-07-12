@@ -2,42 +2,50 @@ import logo from "./logo.png";
 import cart_icon from "./cart_icon.png";
 import search_icon from "./search_icon.svg";
 import menu_icon from "./menu_icon.svg";
+import img1 from './img1.png';
+import img8 from './img8.png';
+import img11 from './img11.png';
 
 export const assets = {
   logo,
   cart_icon,
   search_icon,
-  menu_icon
+  menu_icon,
+  img1,
+  img8,
+  img11
 };
 
 export const footerLinks = [
   {
-    title: "Quick Links",
+    title: "Explore",
     links: [
-      { text: "Home", url: "#" },
-      { text: "Best Sellers", url: "#" },
-      { text: "Offers & Deals", url: "#" },
-      { text: "Contact Us", url: "#" },
-      { text: "FAQs", url: "#" },
-    ],
+      { text: "Home" },
+      { text: "New Arrivals" },
+      { text: "Best Sellers" },
+      { text: "Seasonal Collections" },
+      { text: "Gift Ideas" }
+    ]
   },
   {
-    title: "Need help?",
+    title: "Customer Care",
     links: [
-      { text: "Delivery Information", url: "#" },
-      { text: "Return & Refund Policy", url: "#" },
-      { text: "Payment Methods", url: "#" },
-      { text: "Track your Order", url: "#" },
-      { text: "Contact Us", url: "#" },
-    ],
+      { text: "Delivery Information" },
+      { text: "Return & Refund Policy" },
+      { text: "Payment Options" },
+      { text: "Order Help" },
+      { text: "Contact Support" }
+    ]
   },
   {
-    title: "Follow Us",
+    title: "Connect With Us",
     links: [
-      { text: "Instagram", url: "#" },
-      { text: "Twitter", url: "#" },
-      { text: "Facebook", url: "#" },
-      { text: "YouTube", url: "#" },
-    ],
-  },
+      { text: "Instagram" },
+      { text: "Twitter" },
+      { text: "Facebook" },
+      { text: "YouTube" },
+      { text: "Pinterest" }
+    ]
+  }
 ];
+
