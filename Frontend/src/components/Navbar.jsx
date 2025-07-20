@@ -32,9 +32,13 @@ const Navbar = () => {
           Contact
         </NavLink>
 
-        <button className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-gray-100 transition">
+        <NavLink
+          to="/seller-dashboard"
+          onClick={() => setOpen(false)}
+          className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-gray-100 transition"
+        >
           Seller Dashboard
-        </button>
+        </NavLink>
 
         {/* Search Bar */}
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
