@@ -3,6 +3,7 @@ import Mainbanner from "../components/Mainbanner";
 import Casualinspirations from "../components/Casualinspirations";
 import Categories from "../components/Categories";
 import TrendingSection from "../components/TrendingSection";
+import BottomBanner from "../components/BottomBanner";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Casualinspirations />
       <Categories/>
       <TrendingSection />
+      <BottomBanner/>
     </div>
   );
 };
