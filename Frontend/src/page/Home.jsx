@@ -4,6 +4,7 @@ import Casualinspirations from "../components/Casualinspirations";
 import Categories from "../components/Categories";
 import TrendingSection from "../components/TrendingSection";
 import BottomBanner from "../components/BottomBanner";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Categories/>
       <TrendingSection />
       <BottomBanner/>
+      <NewsLetter />
     </div>
   );
 };
