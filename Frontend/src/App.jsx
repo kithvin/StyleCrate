@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./page/Home";
 import Contact from "./page/Contact";
-
+import Cart from "./page/cart"; 
 const App = () => {
   return (
     <div>
@@ -14,6 +14,8 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/cart" element={<Cart/>} />
+
         </Routes>
       </div>
       <Footer />
