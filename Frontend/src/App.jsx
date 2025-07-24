@@ -7,7 +7,7 @@ import Contact from "./page/Contact";
 import Home from "./page/Home";
 import Cart from "./page/Cart";
 import Login from "./components/Login";
-import { Toaster } from "react-hot-toast";
+import AllProducts from "./page/AllProduct";
 
 const App = () => {
   const location = useLocation();
@@ -27,11 +27,12 @@ const App = () => {
         </div>
       )}
 
-      <Toaster />
+      
 
       <div className={`${isSellerPath ? "" : ""}`}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<AllProducts />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

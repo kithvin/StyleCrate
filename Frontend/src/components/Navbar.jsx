@@ -5,8 +5,7 @@ import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const {user,setUser,setshowUserLogin,navigate} = useAppContext();
+  const {user,setUser,setshowUserLogin,navigate,setSearchQuery,searchQuery} = useAppContext();
   const logout = async => {
     setUser(null);
     navigate("/");

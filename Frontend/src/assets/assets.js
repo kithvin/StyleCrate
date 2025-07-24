@@ -50,6 +50,11 @@ import arrow_right_icon_colored from "./arrow_right_icon_colored.png";
 
 import profile_icon from "./profile_icon.png";
 
+import women_jeans_1 from "./women_jeans_1.jpg";
+import women_tunic_1 from "./women_tunic_1.jpg";
+import pencil_skirt_1 from "./pencil_skirt_1.jpg";
+import women_hoodie_1 from "./women_hoodie_1.jpg";
+
 export const assets = {
   logo,
   cart_icon_addtional,
@@ -96,7 +101,11 @@ export const assets = {
   remove_icon,
   arrow_right_icon_colored,
 
-  profile_icon
+  profile_icon,
+
+  women_jeans_1,
+  pencil_skirt_1,
+  women_hoodie_1
 
 };
 
@@ -268,62 +277,62 @@ export const dummyProducts = [
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
   },
-  // {
-  //   _id: "wo02",
-  //   name: "High-Waist Skinny Jeans",
-  //   category: "Women's Fashion",
-  //   price: 2300,
-  //   offerPrice: 2100,
-  //   image: [women_jeans_1],
-  //   description: [
-  //     "Stretchable and durable denim", "Perfect for a sleek silhouette", "Available in multiple washes"
-  //   ],
-  //   createdAt: "2025-07-14T03:19:40.000Z",
-  //   updatedAt: "2025-07-14T03:19:40.000Z",
-  //   inStock: true,
-  // },
-  // {
-  //   _id: "wo03",
-  //   name: "Boho Style Tunic",
-  //   category: "Women's Fashion",
-  //   price: 1600,
-  //   offerPrice: 1399,
-  //   image: [women_tunic_1],
-  //   description: [
-  //     "Elegant floral prints", "Perfect for festive occasions", "Soft rayon fabric"
-  //   ],
-  //   createdAt: "2025-07-14T03:19:40.000Z",
-  //   updatedAt: "2025-07-14T03:19:40.000Z",
-  //   inStock: true,
-  // },
-  // {
-  //   _id: "wo04",
-  //   name: "Pencil Skirt",
-  //   category: "Women's Fashion",
-  //   price: 1300,
-  //   offerPrice: 1199,
-  //   image: [pencil_skirt_1],
-  //   description: [
-  //     "Office-ready formal skirt", "Stretchable and sleek design", "Mid-rise comfort fit"
-  //   ],
-  //   createdAt: "2025-07-14T03:19:40.000Z",
-  //   updatedAt: "2025-07-14T03:19:40.000Z",
-  //   inStock: true,
-  // },
-  // {
-  //   _id: "wo05",
-  //   name: "Women's Casual Hoodie",
-  //   category: "Women's Fashion",
-  //   price: 2100,
-  //   offerPrice: 1900,
-  //   image: [women_hoodie_1],
-  //   description: [
-  //     "Warm fleece lining", "Trendy relaxed fit", "Great for casual wear"
-  //   ],
-  //   createdAt: "2025-07-14T03:19:40.000Z",
-  //   updatedAt: "2025-07-14T03:19:40.000Z",
-  //   inStock: true,
-  // },
+  {
+    _id: "wo02",
+    name: "High-Waist Skinny Jeans",
+    category: "Women's Fashion",
+    price: 2300,
+    offerPrice: 2100,
+    image: [women_jeans_1],
+    description: [
+      "Stretchable and durable denim", "Perfect for a sleek silhouette", "Available in multiple washes"
+    ],
+    createdAt: "2025-07-14T03:19:40.000Z",
+    updatedAt: "2025-07-14T03:19:40.000Z",
+    inStock: true,
+  },
+  {
+    _id: "wo03",
+    name: "Boho Style Tunic",
+    category: "Women's Fashion",
+    price: 1600,
+    offerPrice: 1399,
+    image: [women_tunic_1],
+    description: [
+      "Elegant floral prints", "Perfect for festive occasions", "Soft rayon fabric"
+    ],
+    createdAt: "2025-07-14T03:19:40.000Z",
+    updatedAt: "2025-07-14T03:19:40.000Z",
+    inStock: true,
+  },
+  {
+    _id: "wo04",
+    name: "Pencil Skirt",
+    category: "Women's Fashion",
+    price: 1300,
+    offerPrice: 1199,
+    image: [pencil_skirt_1],
+    description: [
+      "Office-ready formal skirt", "Stretchable and sleek design", "Mid-rise comfort fit"
+    ],
+    createdAt: "2025-07-14T03:19:40.000Z",
+    updatedAt: "2025-07-14T03:19:40.000Z",
+    inStock: true,
+  },
+  {
+    _id: "wo05",
+    name: "Women's Casual Hoodie",
+    category: "Women's Fashion",
+    price: 2100,
+    offerPrice: 1900,
+    image: [women_hoodie_1],
+    description: [
+      "Warm fleece lining", "Trendy relaxed fit", "Great for casual wear"
+    ],
+    createdAt: "2025-07-14T03:19:40.000Z",
+    updatedAt: "2025-07-14T03:19:40.000Z",
+    inStock: true,
+  },
   // // Footwear
   // {
   //   _id: "fo01",
