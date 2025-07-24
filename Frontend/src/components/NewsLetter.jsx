@@ -16,7 +16,7 @@ const NewsLetter = () => {
       <form className="flex items-center justify-between max-w-2xl md:w-full md:h-13 h-12">
         {/* Email Input Field */}
         <input
-          className="border border-gray-300 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-3 text-gray-500"
+          className="border border-gray-300 rounded-md h-full border-r-0 outline-none w-full rounded-r-none px-2 text-gray-500 text-center"
           type="text"
           placeholder="Enter your email id"
           required

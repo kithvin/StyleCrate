@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { dummyProducts } from "../assets/assets"; // Import dummy products for testing
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
@@ -23,7 +24,7 @@ export const AppContextProvider = ({ children }) => {
   const [isSeller, setIsSeller] = useState(false);
 
   // State to manage visibility of user login form
-  const [showUserLogin, setshowUserLogin] = useState(false);
+  const [showUserLogin, setshowUserLogin] = useState(null);
 
   // State to manage the products (you can later update this with actual product data)
   const [products, setProducts] = useState([]);
@@ -65,17 +66,23 @@ export const AppContextProvider = ({ children }) => {
   // Fetch All product
 
   const fetchProducts = async () => {
-    try {
-      const { data } = await axios.get("/api/product/list");
-      if (data.success) {
-        setProducts(data.products);
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      toast.error(error.message);
-    }
+    // try {
+    //   const { data } = await axios.get("/api/product/list");
+    //   if (data.success) {
+    //     setProducts(data.products);
+    //   } else {
+    //     toast.error(data.message);
+    //   }
+    // } catch (error) {
+    //   toast.error(error.message);
+    // }
+    setProducts(dummyProducts)
   };
+
+  useEffect(() => {
+    fetchProducts();
+  },[]);
+
 
   /* Function to add product to the cart */
   const addToCart = (itemId) => {
@@ -164,21 +171,21 @@ export const AppContextProvider = ({ children }) => {
   }, []);
 
   // Update Database Cart Items
-  useEffect (()=>{
-    const updateCart = async ()=>{
-      try {
-        const {data} = await axios.post('/api/cart/update',{cartItems});
-        if (!data.success){
-          toast.error(data.message);
-        }
-      } catch (error) {
-        toast.error(error.message);
-      }
-    }
-    if(user) {
-      updateCart();
-    }
-  },[cartItems]);
+  // useEffect (()=>{
+  //   const updateCart = async ()=>{
+  //     try {
+  //       const {data} = await axios.post('/api/cart/update',{cartItems});
+  //       if (!data.success){
+  //         toast.error(data.message);
+  //       }
+  //     } catch (error) {
+  //       toast.error(error.message);
+  //     }
+  //   }
+  //   if(user) {
+  //     updateCart();
+  //   }
+  // },[cartItems]);
 
   // The context value that will be provided to children components
   const value = {

@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { assets } from "../assets/assets";
+import {assets} from "../assets/assets";
+import { useAppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const {user,setUser,setshowUserLogin,navigate} = useAppContext();
+  const logout = async => {
+    setUser(null);
+    navigate("/");
+  }
   const cartCount = 3;
 
   useEffect(() => {
@@ -52,7 +58,7 @@ const Navbar = () => {
         </div>
 
         {/* Cart */}
-        <NavLink to="/cart" className="relative cursor-pointer">
+        <div onClick={()=> navigate('/cart')} className="relative cursor-pointer">
           <img
             src={assets.cart_icon_addtional}
             alt="cart"
@@ -63,11 +69,20 @@ const Navbar = () => {
               {cartCount}
             </span>
           )}
-        </NavLink>
+        </div>
 
-        <button className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full ml-1">
+        { !user ? ( <button onClick={()=> setshowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full ml-1">
           Login
-        </button>
+        </button>)
+        : (
+          <div className="relative group">
+            <img src={assets.profile_icon} className="w-10" alt="" />
+            <ul className="hidden group-hover:block absolute top-10 right-0 bg-white shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40">
+              <li onClick={()=>navigate('my-orders')} className="p-1.5 pl-6 hover:bg-primary/10 cursor-pointer">My Orders</li>
+              <li onClick={logout} className="p-1.5 pl-8 hover:bg-primary/10 cursor-pointer">Logout</li>
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu */}
@@ -111,6 +126,7 @@ const Navbar = () => {
             >
               All Products
             </NavLink>
+            {user &&
             <NavLink
               to="/orders"
               onClick={() => setOpen(false)}
@@ -118,6 +134,7 @@ const Navbar = () => {
             >
               My Orders
             </NavLink>
+             }
             <NavLink
               to="/contact"
               onClick={() => setOpen(false)}
@@ -136,13 +153,24 @@ const Navbar = () => {
           </NavLink>
 
           <hr className="my-4 border-gray-300" />
-
+        {!user ? (
           <button
-            onClick={() => setOpen(false)}
-            className="w-full py-2 bg-primary text-white rounded-full hover:bg-primary-dull transition"
-          >
-            Login
-          </button>
+          onClick={() => {setOpen(false);
+          setshowUserLogin(true);
+        }}
+          className="w-full py-2 bg-primary text-white rounded-full hover:bg-primary-dull transition"
+        >
+          Login
+        </button>
+        ) : (
+          <button
+          onClick={logout}
+          className="w-full py-2 bg-primary text-white rounded-full hover:bg-primary-dull transition"
+        >
+          logout
+        </button>
+        )}
+          
         </div>
       )}
     </div>

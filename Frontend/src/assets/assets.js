@@ -48,6 +48,8 @@ import clock_icon from "./clock_icon.png";
 import remove_icon from "./remove_icon.svg";
 import arrow_right_icon_colored from "./arrow_right_icon_colored.png";
 
+import profile_icon from "./profile_icon.png";
+
 export const assets = {
   logo,
   cart_icon_addtional,
@@ -92,7 +94,9 @@ export const assets = {
   clock_icon,
 
   remove_icon,
-  arrow_right_icon_colored
+  arrow_right_icon_colored,
+
+  profile_icon
 
 };
 
@@ -136,43 +140,43 @@ export const categories = [
     text: "Men's Fashion",
     path: "Men",
     image: fashion1, 
-    bgColor: "#FEF6DA",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Women's Fashion",
     path: "Women",
     image: fashion2, 
-    bgColor: "#FEE0E0",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Footwear",
     path: "Footwear",
     image: fashion3, 
-    bgColor: "#F0F5DE",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Accessories",
     path: "Accessories",
     image: fashion4, 
-    bgColor: "#E1F5EC",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Kids & Babywear",
     path: "Kids",
     image: fashion5, 
-    bgColor: "#F1E3F9",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Ethnic Wear",
     path: "Ethnic",
     image: fashion6,
-    bgColor: "#E0F6FE",
+    bgColor: "#fdfefe ",
   },
   {
     text: "Winter Wear",
     path: "Winter",
     image: fashion7, 
-    bgColor: "#FEE6CD",
+    bgColor: "#fdfefe ",
   },
 ];
 
