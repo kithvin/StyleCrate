@@ -8,6 +8,8 @@ import Home from "./page/Home";
 import Cart from "./page/Cart";
 import Login from "./components/Login";
 import AllProducts from "./page/AllProduct";
+import ProductCategory from "./page/ProductCategory";
+import ProductDetails from "./page/ProductDetails";
 
 const App = () => {
   const location = useLocation();
@@ -17,7 +19,6 @@ const App = () => {
 
   return (
     <div className="text-default min-h-screen text-gray-700 bg-white">
-      
       {!isSellerPath && <Navbar />}
 
       {/* Transparent login popup without background shading */}
@@ -27,13 +28,13 @@ const App = () => {
         </div>
       )}
 
-      
-
       <div className={`${isSellerPath ? "" : ""}`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/products/:category" element={<ProductCategory />} />
+          <Route path="/products/:category/:id" element={<ProductDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

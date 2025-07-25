@@ -5,27 +5,33 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800">
       {/* Header Section */}
-      <div className="pt-24 pb-10 text-center px-4 bg-gradient-to-br from-white">
+      <div className="md:pt-12 pt-12 pb-10 text-center px-4 bg-gradient-to-br from-white">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
           Let’s Talk Style
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto md:mt-4">
           Have questions about fit, shipping, or styling? Our team of fashion
           consultants is here to help.
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 py-2 md:py-12">
+      <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 py-2 md:py-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Store Details */}
           <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold md:mb-11 mb-7 text-primary">Visit Our Showroom</h2>
+            <h2 className="text-2xl font-bold md:mb-11 mb-7 text-primary">
+              Visit Our Showroom
+            </h2>
 
             <div className="space-y-6">
               {/* Location */}
               <div className="flex items-start gap-4">
-                <img src={assets.location_icon} alt="Location" className="w-6 mt-1" />
+                <img
+                  src={assets.location_icon}
+                  alt="Location"
+                  className="w-6 mt-1"
+                />
                 <div>
                   <h3 className="font-semibold text-lg">Location</h3>
                   <p className="text-gray-600">12 Trendsetter Blvd</p>
@@ -39,7 +45,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg">Phone Support</h3>
                   <p className="text-gray-600">+94 77 123 9876 (General)</p>
-                  <p className="text-gray-600">+94 76 321 1234 (Styling Help)</p>
+                  <p className="text-gray-600">
+                    +94 76 321 1234 (Styling Help)
+                  </p>
                 </div>
               </div>
 
@@ -58,8 +66,12 @@ const Contact = () => {
                 <img src={assets.clock_icon} alt="Hours" className="w-6 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg">Opening Hours</h3>
-                  <p className="text-gray-600"><strong>Mon–Fri:</strong> 9:00 AM – 8:00 PM</p>
-                  <p className="text-gray-600"><strong>Sat–Sun:</strong> 10:00 AM – 6:00 PM</p>
+                  <p className="text-gray-600">
+                    <strong>Mon–Fri:</strong> 9:00 AM – 8:00 PM
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Sat–Sun:</strong> 10:00 AM – 6:00 PM
+                  </p>
                 </div>
               </div>
             </div>

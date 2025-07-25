@@ -52,7 +52,7 @@ function TrendingSection() {
 
   return (
     <section className="px-4 lg:px-16 md:py-18 py-12">
-      <h2 className="text-2xl sm:text-3xl font-semibold mb-8 text-center md:text-left">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-900 mb-8 text-center md:text-left">
         Trending Products
       </h2>
 

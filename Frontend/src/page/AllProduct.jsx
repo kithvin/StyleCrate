@@ -30,7 +30,7 @@ const AllProducts = () => {
     <div className="md:mt-12 mt-12 flex flex-col md:px-20 lg:px-26 px-4"> 
        {/* Section title */}
       <div className="flex flex-col items-center mb-8 md:mb-2">
-        <p className="text-2xl md:text-3xl text-center mb-2 font-semibold">All Products</p>
+        <p className="text-neutral-900 font-bold drop-shadow-lgtext-2xl text-2xl md:text-3xl text-center mb-2">All Products</p>
         {/* <div className="w-16 h-0.5 bg-primary rounded-full"></div> */}
       </div>
 

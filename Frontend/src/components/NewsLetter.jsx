@@ -5,7 +5,7 @@ const NewsLetter = () => {
   return (
     <div className="flex flex-col items-center justify-center text-center space-y-2 mt-20 md:mt-26 pb-14">
       {/* Title */}
-      <h1 className="md:text-4xl text-2xl font-semibold">Be the First to Know !</h1>
+      <h1 className="md:text-4xl text-neutral-900 text-2xl font-semibold">Be the First to Know !</h1>
 
       {/* Description */}
       <p className="md:text-lg text-gray-500/70 pb-8">
@@ -25,7 +25,7 @@ const NewsLetter = () => {
         {/* Subscribe Button */}
         <button
           type="submit"
-          className="md:px-12 px-8 h-full text-white bg-primary hover:bg-primary-dull transition-all cursor-pointer rounded-md rounded-l-none"
+          className="md:px-12 px-8 h-full text-white bg-black hover:bg-primary-dull transition-all cursor-pointer rounded-md rounded-l-none"
         >
           Subscribe
         </button>
