@@ -79,6 +79,7 @@ import puffer_jacket_men_1 from "./puffer_jacket_men_1.webp";
 import kids_hoodie_1 from "./kids_hoodie_1.webp";
 import beanie_hat_1 from "./beanie_hat_1.webp";
 import thermal_set_1 from "./thermal_set_1.webp";
+import add_address_image from "./add_address_image.svg";
 
 export const assets = {
   logo,
@@ -154,7 +155,8 @@ export const assets = {
   womentunic1,
   silk_saree_1,
   tote_bag_1,
-  puffer_jacket_men_1
+  puffer_jacket_men_1,
+  add_address_image
 
 
 };

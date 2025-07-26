@@ -11,6 +11,7 @@ import AllProducts from "./page/AllProduct";
 import ProductCategory from "./page/ProductCategory";
 import ProductDetails from "./page/ProductDetails";
 import ExploreDeals from "./components/ExploreDeals";
+import AddAddress from "./page/AddAddress";
 
 const App = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<AllProducts />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/add-address" element={<AddAddress />} />
           <Route path="/products/:category" element={<ProductCategory />} />
           <Route path="/products/:category/:id" element={<ProductDetails />} />
           <Route path="/deals" element={<ExploreDeals />} />
