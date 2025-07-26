@@ -12,6 +12,7 @@ import ProductCategory from "./page/ProductCategory";
 import ProductDetails from "./page/ProductDetails";
 import ExploreDeals from "./components/ExploreDeals";
 import AddAddress from "./page/AddAddress";
+import MyOrders from "./page/MyOrders";
 
 const App = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/add-address" element={<AddAddress />} />
           <Route path="/products/:category" element={<ProductCategory />} />
+          <Route path="/my-orders" element={<MyOrders />} />
           <Route path="/products/:category/:id" element={<ProductDetails />} />
           <Route path="/deals" element={<ExploreDeals />} />
           <Route path="/contact" element={<Contact />} />
