@@ -52,7 +52,7 @@ import profile_icon from "./profile_icon.png";
 
 import women_jeans_1 from "./women_jeans_1.webp";
 import womentunic1 from "./womentunic1.jpg";
-import pencil_skirt_1 from "./pencil_skirt_1.jpg";
+import pencilskirt from "./pencilskirt.jpg";
 import women_hoodie_1 from "./women_hoodie_1.jpg";
 import sneaker_men_1 from "./sneaker_men_1.jpg";
 import heel_women_1 from "./heel_women_1.jpg";
@@ -130,7 +130,7 @@ export const assets = {
   profile_icon,
 
   women_jeans_1,
-  pencil_skirt_1,
+  pencilskirt,
   women_hoodie_1,
   sneaker_men_1,
   heel_women_1,
@@ -363,7 +363,7 @@ export const dummyProducts = [
     category: "Women's Fashion",
     price: 1300,
     offerPrice: 1199,
-    image: [pencil_skirt_1],
+    image: [pencilskirt],
     description: [
       "Office-ready formal skirt", "Stretchable and sleek design", "Mid-rise comfort fit"
     ],
