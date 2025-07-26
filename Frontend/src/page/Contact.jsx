@@ -9,7 +9,7 @@ const Contact = () => {
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
           Let’s Talk Style
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto md:mt-4">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-6 md:mt-4">
           Have questions about fit, shipping, or styling? Our team of fashion
           consultants is here to help.
         </p>

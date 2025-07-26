@@ -50,7 +50,7 @@ import arrow_right_icon_colored from "./arrow_right_icon_colored.png";
 
 import profile_icon from "./profile_icon.png";
 
-import women_jeans_1 from "./women_jeans_1.jpg";
+import women_jeans_1 from "./women_jeans_1.webp";
 import women_tunic_1 from "./women_tunic_1.jpg";
 import pencil_skirt_1 from "./pencil_skirt_1.jpg";
 import women_hoodie_1 from "./women_hoodie_1.jpg";
@@ -150,7 +150,11 @@ export const assets = {
   girls_lehenga_1,
   kids_hoodie_1,
   beanie_hat_1,
-  thermal_set_1
+  thermal_set_1,
+  women_tunic_1,
+  silk_saree_1,
+  tote_bag_1,
+  puffer_jacket_men_1
 
 
 };

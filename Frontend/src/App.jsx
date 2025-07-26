@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import AllProducts from "./page/AllProduct";
 import ProductCategory from "./page/ProductCategory";
 import ProductDetails from "./page/ProductDetails";
+import ExploreDeals from "./components/ExploreDeals";
 
 const App = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/products/:category" element={<ProductCategory />} />
           <Route path="/products/:category/:id" element={<ProductDetails />} />
+          <Route path="/deals" element={<ExploreDeals />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
