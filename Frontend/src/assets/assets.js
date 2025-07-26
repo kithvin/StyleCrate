@@ -51,7 +51,7 @@ import arrow_right_icon_colored from "./arrow_right_icon_colored.png";
 import profile_icon from "./profile_icon.png";
 
 import women_jeans_1 from "./women_jeans_1.webp";
-import women_tunic_1 from "./women_tunic_1.jpg";
+import womentunic1 from "./womentunic1.jpg";
 import pencil_skirt_1 from "./pencil_skirt_1.jpg";
 import women_hoodie_1 from "./women_hoodie_1.jpg";
 import sneaker_men_1 from "./sneaker_men_1.jpg";
@@ -151,7 +151,7 @@ export const assets = {
   kids_hoodie_1,
   beanie_hat_1,
   thermal_set_1,
-  women_tunic_1,
+  womentunic1,
   silk_saree_1,
   tote_bag_1,
   puffer_jacket_men_1
@@ -347,7 +347,7 @@ export const dummyProducts = [
     category: "Women's Fashion",
     price: 1600,
     offerPrice: 1399,
-    image: [women_tunic_1],
+    image: [womentunic1],
     description: [
       "Elegant floral prints", "Perfect for festive occasions", "Soft rayon fabric"
     ],

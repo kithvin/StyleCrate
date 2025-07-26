@@ -26,7 +26,7 @@ const ExploreDeals = () => {
       description: "Effortless style at a fraction of the price.",
       longDescription:
         "Enjoy 40% off on a curated selection of women’s tops, including blouses, tunics, and weekend wear. Discover modern silhouettes for every mood.",
-      image: assets.women_tunic_1,
+      image: assets.womentunic1,
       category: "Women’s Fashion",
       route: "women",
       discount: "40% Off",
