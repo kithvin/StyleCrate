@@ -79,7 +79,13 @@ import puffer_jacket_men_1 from "./puffer_jacket_men_1.webp";
 import kids_hoodie_1 from "./kids_hoodie_1.webp";
 import beanie_hat_1 from "./beanie_hat_1.webp";
 import thermal_set_1 from "./thermal_set_1.webp";
+
 import add_address_image from "./add_address_image.svg";
+import add_icon from "./add_icon.svg";
+import product_list_icon from "./product_list_icon.svg";
+import order_icon from "./order_icon.svg";
+import upload_area from "./upload_area.png";
+import box_icon from "./box_icon.svg";
 
 export const assets = {
   logo,
@@ -156,9 +162,13 @@ export const assets = {
   silk_saree_1,
   tote_bag_1,
   puffer_jacket_men_1,
-  add_address_image
+  add_address_image,
 
-
+  add_icon,
+  product_list_icon,
+  order_icon,
+  upload_area,
+  box_icon
 };
 
 // Footer Data

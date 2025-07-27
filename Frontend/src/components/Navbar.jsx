@@ -13,6 +13,7 @@ const Navbar = () => {
     setSearchQuery,
     searchQuery,
     getCartCount,
+    isSeller
   } = useAppContext();
   const logout = (async) => {
     setUser(null);
@@ -46,7 +47,7 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink
-          to="/seller-dashboard"
+          to="/seller-login"
           onClick={() => setOpen(false)}
           className="border px-4 py-1 text-sm font-light rounded-full cursor-pointer hover:bg-gray-100 transition"
         >
@@ -185,7 +186,7 @@ const Navbar = () => {
           </div>
 
           <NavLink
-            to="/seller-dashboard"
+            to="/seller-login"
             onClick={() => setOpen(false)}
             className="block mt-4 text-center py-2 rounded-lg bg-gray-100 hover:bg-primary/10 transition border"
           >
