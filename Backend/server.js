@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./configs/db.js";
 import userRouter from "./routes/userRouter.js";
+import sellerRouter from "./routes/sellerRouter.js";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -30,6 +31,8 @@ app.get("/", (req, res) => {
 });
 
 app.use('/api/user', userRouter); // All user-related routes start with /api/user
+
+app.use('/api/seller', sellerRouter); // All seller-related routes start with /api/seller
 
 // Start the server and listen on the defined port
 app.listen(port, () => {
