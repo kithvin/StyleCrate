@@ -1,24 +1,34 @@
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
-import express from 'express';
+import express from "express";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import connectDB from "./configs/db.js";
+import "dotenv/config";
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
-//Allow multiple origins
-const allowedOrigins = ['http://localhost:3000'];
+// Define allowed origins for CORS
+const allowedOrigins = ["http://localhost:3000"];
 
-// Middleware
+// Connect to MongoDB database
+await connectDB();
+
+// Middleware Configuration
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: allowedOrigins, credentials: true }));
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 
-// Routes
-app.get('/', (req, res) => {
-  res.send('Hello from Express!');
+// Root route to test if API is working
+app.get("/", (req, res) => {
+  res.send("API is Working 🚀");
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+// Start the server and listen on the defined port
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
