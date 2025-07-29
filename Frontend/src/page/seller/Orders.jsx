@@ -33,9 +33,9 @@ const Orders = () => {
 
   return (
     <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll">
-      <div className="md:p-10 p-4 space-y-4">
+      <div className="md:p-10 p-6 space-y-4">
         {/* Page Title */}
-        <h2 className="text-lg font-medium">Orders List</h2>
+        <h2 className="pb-2 ml-14 md:pb-12 md:ml-92 text-2xl font-semibold">Orders List</h2>
 
         {/* Loop through each order */}
         {orders.map((order, index) => (

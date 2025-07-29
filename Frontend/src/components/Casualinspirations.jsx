@@ -15,7 +15,7 @@ const Casualinspirations = () => {
           comfortable for all day wear, and easy to personalize for your unique
           everyday lifestyle and routine.
         </p>
-        <NavLink to="/products" className="w-full px-5 py-3 bg-black rounded-lg text-white text-center font-medium mt-4 md:mt-8 md:w-102 sm:px-7 transition-all duration-200  md:h-12 border border-neutral-900 flex items-center justify-center mx-auto md:mx-0 cursor-pointer">
+        <NavLink to="/products" className="w-full px-5 py-3 md:py-6 bg-neutral-900 rounded-lg text-white text-center font-medium cursor-pointer mt-5 md:mt-8 md:w-102 sm:px-7 transition-all duration-200  md:h-12 border border-neutral-900 flex items-center justify-center mx-auto md:mx-0">
           Browse Inspirations
         </NavLink>
       </div>
