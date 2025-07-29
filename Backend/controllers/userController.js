@@ -1,6 +1,6 @@
-import User from '../Models/User.js'; // Import User model
-import bcrypt from 'bcryptjs'; // Import bcryptjs for password hashing
-import jwt from 'jsonwebtoken'; // Import jsonwebtoken for token generation
+import User from "../Models/User.js"; // Import User model
+import bcrypt from "bcryptjs"; // Import bcryptjs for password hashing
+import jwt from "jsonwebtoken"; // Import jsonwebtoken for token generation
 
 // Register User : /api/user/register
 
@@ -32,10 +32,10 @@ export const Register = async (req, res) => {
     });
 
     // Set the JWT token in cookies
-    res.cookie('token', token, {
+    res.cookie("token", token, {
       httpOnly: true, // Prevent JavaScript to access cookie
-      secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
-      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict', // CSRF protection
+      secure: process.env.NODE_ENV === "production", // Use secure cookies in production
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict", // CSRF protection
       maxAge: 7 * 24 * 60 * 60 * 1000, // Cookie expiration time
     });
 
@@ -101,6 +101,47 @@ export const login = async (req, res) => {
     });
   } catch (error) {
     console.log(error.message);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+// Check Authentication : /api/user/is-auth
+
+export const isAuth = async (req, res) => {
+  try {
+    // Extract userId from the request body
+    //if error backend error use (const userId = req.user.id);
+    const userId = req.user.id;
+
+    // Find the user by ID and exclude the password field
+    const user = await User.findById(userId).select("-password");
+
+    // Return the authenticated user data
+    return res.json({ success: true, user });
+  } catch (error) {
+    console.log(error.message);
+
+    // Handle errors and return failure response
+    res.json({ success: false, message: error.message });
+  }
+};
+
+// Logout : /api/user/logout
+
+export const logout = async (req, res) => {
+  try {
+    // Clear the authentication token cookie
+    res.clearCookie("token", {
+      httpOnly: true, // Prevent access from client-side scripts
+      secure: process.env.NODE_ENV === "production", // Use secure cookies in production
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "strict", // Handle cross-site settings
+    });
+
+    // Return success message
+    return res.json({ success: true, message: "Logged Out" });
+  } catch (error) {
+    console.log(error.message);
+    // Handle errors and return failure response
     res.json({ success: false, message: error.message });
   }
 };
