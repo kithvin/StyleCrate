@@ -1,8 +1,9 @@
+import "dotenv/config";
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./configs/db.js";
-import "dotenv/config";
+import userRouter from "./routes/userRouter.js";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -27,6 +28,8 @@ app.use(
 app.get("/", (req, res) => {
   res.send("API is Working 🚀");
 });
+
+app.use('/api/user', userRouter); // All user-related routes start with /api/user
 
 // Start the server and listen on the defined port
 app.listen(port, () => {
