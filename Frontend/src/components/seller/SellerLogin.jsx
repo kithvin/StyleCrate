@@ -1,44 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext"; // Import global app context
-// import toast from "react-hot-toast";
-// import { data } from "react-router-dom";
+import  toast from "react-hot-toast";
+import { data } from "react-router-dom";
 
 const SellerLogin = () => {
   // Extract values from global AppContext
-  // const { isSeller, setIsSeller, navigate, axios } = useAppContext();
-  const { isSeller, setIsSeller, navigate } = useAppContext();
-
+  const { isSeller, setIsSeller, navigate, axios } = useAppContext();
+  
   // Local state for email and password fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   // Handle form submission
   const onSubmitHandler = async (event) => {
-    // try {
+    try {
       event.preventDefault();
-      // const { data } = await axios.post("/api/seller/login", {
-      //   email,
-      //   password,
-      // });
-      // if (data.success) {
-      //   setIsSeller(true);
-      //   navigate("/seller");
-      // } else {
-      //   toast.error(data.message);
-      // }
-  //   } catch (error) {
-  //     toast.error(data.message);
-  //   }
-  // // };
-  
-// Simulated login logic
-  if (email && password) {
-    setIsSeller(true);
-    navigate("/seller");
-  } else {
-    alert("Please enter email and password.");
-  }
-};
+      const { data } = await axios.post('/api/seller/login', {
+        email,
+        password,
+      });
+      if (data.success) {
+        setIsSeller(true);
+        navigate('/seller');
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(data.message);
+    }
+  };
 
   // Redirect seller to the seller dashboard/homepage if already logged in
   useEffect(() => {

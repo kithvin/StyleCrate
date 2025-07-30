@@ -2,11 +2,10 @@ import React from "react";
 import { useAppContext } from "../../context/AppContext";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { assets } from "../../assets/assets";
-import toast from "react-hot-toast";
 
 const SellerLayout = () => {
   // Extract setter from app-wide context to control seller login state
-  const { axios, navigate } = useAppContext();
+  const { axios, navigate, setIsSeller} = useAppContext();
 
   // Sidebar navigation configuration for seller panel
   const sidebarLinks = [
@@ -20,18 +19,33 @@ const SellerLayout = () => {
   ];
 
   // Seller logout function: resets login state
+  // const logout = async () => {
+  //   try {
+  //     const { data } = await axios.get("/api/seller/logout");
+  //     if (data.success) {
+  //       toast.success(data.message);
+  //       navigate('/');
+  //     } else {
+  //       toast.error(data.message);
+  //     }
+  //   } catch (error) {
+  //     toast.error(error.message);
+  //   }
+  // };
+
   const logout = async () => {
-    // try {
-    //   const { data } = await axios.get("/api/seller/logout");
-    //   if (data.success) {
-    //     toast.success(data.message);
-        navigate("/");
-    //   } else {
-    //     toast.error(data.message);
-    //   }
-    // } catch (error) {
-    //   toast.error(error.message);
-    // }
+    try {
+      const { data } = await axios.get("/api/seller/logout");
+      if (data.success) {
+        setIsSeller(false); 
+        console.log(data.message);
+        navigate('/');
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
