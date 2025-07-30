@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { dummyProducts } from "../assets/assets"; // Import dummy products for testing
+
 
 axios.defaults.withCredentials = true;
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
@@ -66,16 +66,16 @@ export const AppContextProvider = ({ children }) => {
   // Fetch All product
 
   const fetchProducts = async () => {
-    // try {
-    //   const { data } = await axios.get("/api/product/list");
-    //   if (data.success) {
-    //     setProducts(data.products);
-    //   } else {
-    //     toast.error(data.message);
-    //   }
-    // } catch (error) {
-    //   toast.error(error.message);
-    // }
+    try {
+      const { data } = await axios.get("/api/product/list");
+      if (data.success) {
+        setProducts(data.products);
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
     setProducts(dummyProducts)
   };
 
