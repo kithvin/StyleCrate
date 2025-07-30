@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext"; // Import global app context
-import  toast from "react-hot-toast";
 import { data } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const SellerLogin = () => {
   // Extract values from global AppContext
@@ -13,20 +13,25 @@ const SellerLogin = () => {
 
   // Handle form submission
   const onSubmitHandler = async (event) => {
+    event.preventDefault();
     try {
-      event.preventDefault();
       const { data } = await axios.post('/api/seller/login', {
         email,
         password,
       });
+  
       if (data.success) {
+        toast.success(data.message || "Login successful!"); 
         setIsSeller(true);
         navigate('/seller');
       } else {
-        toast.error(data.message);
+        toast.error(data.message || "Invalid credentials");  
       }
+  
     } catch (error) {
-      toast.error(data.message);
+      toast.error(
+        error.response?.data?.message || "Something went wrong. Please try again."
+      );
     }
   };
 

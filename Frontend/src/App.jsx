@@ -83,6 +83,7 @@ import SellerLayout from "./page/seller/SellerLayout";
 import AddProduct from "./page/seller/AddProduct";
 import ProductList from "./page/seller/ProductList";
 import Orders from "./page/seller/Orders";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const location = useLocation();
@@ -100,7 +101,27 @@ const App = () => {
           <Login />
         </div>
       )}
-
+      <Toaster
+        toastOptions={{
+          style: {
+            background: "white",
+            color: "black",
+            border: "1px solid #ccc", // Optional: adds subtle border
+          },
+          success: {
+            iconTheme: {
+              primary: "black",
+              secondary: "white",
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: "black",
+              secondary: "white",
+            },
+          },
+        }}
+      />
       <div className={`${isSellerPath ? "" : ""}`}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -114,7 +135,10 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/seller-login" element={<SellerLogin />} />
-          <Route path="/seller" element={isSeller ? <SellerLayout /> : <SellerLogin />}>
+          <Route
+            path="/seller"
+            element={isSeller ? <SellerLayout /> : <SellerLogin />}
+          >
             <Route index element={<AddProduct />} />
             <Route path="product-list" element={<ProductList />} />
             <Route path="orders" element={<Orders />} />
@@ -128,4 +152,3 @@ const App = () => {
 };
 
 export default App;
-
