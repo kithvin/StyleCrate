@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const Login = () => {
   // Access global context functions for setting user and toggling modal visibility
-  const { setshowUserLogin, setUser, navigate } = useAppContext();
+  const { setshowUserLogin, setUser, navigate, axios } = useAppContext();
 
   // Local component states
   const [state, setState] = React.useState("login");
@@ -13,14 +13,68 @@ const Login = () => {
   const [password, setPassword] = React.useState("");
 
   // Handle form submission (login or register)
+  // const onSubmitHandler = async (event) => {
+  //   try {
+  //     event.preventDefault();
+
+  //     const { data } = await axios.post(`/api/user/${state}`, {
+  //       name,
+  //       email,
+  //       password,
+  //     });
+
+  //     if (data.success) {
+  //       toast.success(data.message || "Login successful!");
+  //       navigate("/");
+  //       setUser(data.user);
+  //       setshowUserLogin(false); // Close the login modal after submission
+  //     } else {
+  //       toast.error(data.message || "Invalid credentials");
+  //     }
+  //   } catch (error) {
+  //     toast.error(
+  //       error.response?.data?.message ||
+  //         "Something went wrong. Please try again." 
+  //     );
+  //   }
+
+  //   e.preventDefault();
+  //   console.log("Submitted:", { name, email, password, mode: state });
+  //   alert(`${state === "login" ? "Logged in" : "Account created"} (simulated)`);
+  //   setshowUserLogin(false); // hide modal
+  // };
+
+  // Handle form submission (login or register)
   const onSubmitHandler = async (event) => {
     event.preventDefault();
 
-     setUser({
-      email : "test@gmail.com",
-      name :"Test User",
-     })
-    setshowUserLogin(false);
+    try {
+      const { data } = await axios.post(`/api/user/${state}`, {
+        name,
+        email,
+        password,
+      });
+
+      if (data.success) {
+        if (state === "login") {
+          toast.success(data.message || "Login successful!");
+        } else {
+          toast.success(data.message || "User registered successfully!");
+        }
+
+        console.log("Submitted:", { name, email, password, mode: state });
+        setUser(data.user);
+        navigate("/");
+        setshowUserLogin(false); // Close the login modal after submission
+      } else {
+        toast.error(data.message || "Invalid credentials");
+      }
+    } catch (error) {
+      toast.error(
+        error.response?.data?.message ||
+          "Something went wrong. Please try again."
+      );
+    }
   };
 
   return (

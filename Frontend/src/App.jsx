@@ -106,7 +106,7 @@ const App = () => {
           style: {
             background: "white",
             color: "black",
-            border: "1px solid #ccc", // Optional: adds subtle border
+            border: "1px solid #ccc", 
           },
           success: {
             iconTheme: {
