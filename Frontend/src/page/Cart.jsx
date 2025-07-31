@@ -157,7 +157,7 @@ const Cart = () => {
                   <p className="font-semibold line-clamp-2">{product.name}</p>
                   <div className="font-normal text-gray-500/70 mt-1">
                     <p className="text-sm">
-                      Weight: <span>{product.weight || "N/A"}</span>
+                      Size: <span>{product.weight || "Free Size"}</span>
                     </p>
                     <div className="flex items-center mt-1">
                       <p className="text-sm md:text-base">Qty:</p>

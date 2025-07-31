@@ -17,13 +17,10 @@ const ProductCategory = () => {
   );
 
   // Filter the products that belong to the current category
-  //   const filteredProducts = products.filter(
-  //     (product) => product.category.toLowerCase() === category
-  //   );
-  const filteredProducts = searchCategory
-    ? products.filter((product) => product.category === searchCategory.text)
-    : [];
-
+    const filteredProducts = products.filter(
+      (product) => product.category.toLowerCase() === category
+    );
+  
   return (
     <div className="md:mt-13 mt-12 flex flex-col md:px-20 lg:px-36 px-4">
       {/* Display category title and underline if a matching category is found */}

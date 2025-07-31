@@ -5,7 +5,7 @@ const BottomBanner = () => {
   return (
     <div className="relative overflow-hidden rounded-2xl mx-4 md:mx-8 lg:mx-16 my-2 md:my-12 shadow-xl">
       {/* Background Section */}
-      <div className="relative h-full md:h-165 min-h-[680px] md:min-h-[500px]">
+      <div className="relative h-full md:h-200 min-h-[680px] md:min-h-[500px]">
         {/* Desktop Image */}
         <img
           src={assets.bottom_banner_image}

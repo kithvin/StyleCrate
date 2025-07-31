@@ -171,21 +171,21 @@ export const AppContextProvider = ({ children }) => {
   }, []);
 
   // Update Database Cart Items
-  // useEffect (()=>{
-  //   const updateCart = async ()=>{
-  //     try {
-  //       const {data} = await axios.post('/api/cart/update',{cartItems});
-  //       if (!data.success){
-  //         toast.error(data.message);
-  //       }
-  //     } catch (error) {
-  //       toast.error(error.message);
-  //     }
-  //   }
-  //   if(user) {
-  //     updateCart();
-  //   }
-  // },[cartItems]);
+  useEffect (()=>{
+    const updateCart = async ()=>{
+      try {
+        const {data} = await axios.post('/api/cart/update',{cartItems});
+        if (!data.success){
+          toast.error(data.message);
+        }
+      } catch (error) {
+        toast.error(error.message);
+      }
+    }
+    if(user) {
+      updateCart();
+    }
+  },[cartItems]);
 
   // The context value that will be provided to children components
   const value = {
