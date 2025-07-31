@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
-import { dummyOrders } from "../assets/assets";
+// import { dummyOrders } from "../assets/assets";
 
 
 const MyOrders = () => {
@@ -10,29 +10,28 @@ const MyOrders = () => {
   // Get currency symbol from context
   const { currency, axios, user } = useAppContext();
 
-  const fetchMyorders = async () => {
-    // try {
-    //   const { data } = await axios.get("/api/order/user");
-    //   if (data.success) {
-    //     setMyOrders(data.orders);
-    //   }
-    // } catch (error) {
-    //   console.error("Error fetching orders:", error);
-    // }
-    setMyOrders(dummyOrders)
-  };
-
-  //   const fetchMyorders = async () => {
+  // const fetchMyorders = async () => {
   //   try {
-  //     const { data } = await axios.get('/api/order/user'); // Changed to GET
-  //     if(data.success) {
-  //       console.log("Orders data:", data.orders); // Debug log
+  //     const { data } = await axios.get("/api/order/user");
+  //     if (data.success) {
   //       setMyOrders(data.orders);
   //     }
   //   } catch (error) {
   //     console.error("Error fetching orders:", error);
   //   }
   // };
+
+    const fetchMyorders = async () => {
+    try {
+      const { data } = await axios.get('/api/order/user'); // Changed to GET
+      if(data.success) {
+        console.log("Orders data:", data.orders); // Debug log
+        setMyOrders(data.orders);
+      }
+    } catch (error) {
+      console.error("Error fetching orders:", error);
+    }
+  };
 
   // Fetch orders on component mount
   useEffect(() => {

@@ -76,12 +76,7 @@ export const AppContextProvider = ({ children }) => {
     } catch (error) {
       toast.error(error.message);
     }
-    setProducts(dummyProducts)
   };
-
-  useEffect(() => {
-    fetchProducts();
-  },[]);
 
 
   /* Function to add product to the cart */
