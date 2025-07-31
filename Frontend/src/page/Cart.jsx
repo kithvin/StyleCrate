@@ -369,7 +369,7 @@ const Cart = () => {
 
           <button
             onClick={placeOrder}
-            className="mt-8 w-full px-5 py-3 bg-neutral-900 rounded-lg text-white text-center font-medium"
+            className="mt-8 w-full px-5 py-3 bg-neutral-900 rounded-lg text-white text-center font-medium cursor-pointer"
           >
             {paymentoption === "COD" ? "Place Order" : "Proceed to Checkout"}
           </button>
