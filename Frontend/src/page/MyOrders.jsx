@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useAppContext } from "../context/AppContext";
 // import { dummyOrders } from "../assets/assets";
 
-
 const MyOrders = () => {
   // State to store orders
   const [myOrders, setMyOrders] = useState([]);
@@ -23,9 +22,9 @@ const MyOrders = () => {
 
     const fetchMyorders = async () => {
     try {
-      const { data } = await axios.get('/api/order/user'); // Changed to GET
+      const { data } = await axios.get('/api/order/user'); 
       if(data.success) {
-        console.log("Orders data:", data.orders); // Debug log
+        console.log("Orders data:", data.orders); 
         setMyOrders(data.orders);
       }
     } catch (error) {
@@ -95,7 +94,7 @@ const MyOrders = () => {
               </div>
 
               {/* Item details */}
-              <div className="flex flex-col justify-center mr-17 md:ml-8 text-sm sm:text-base">
+              <div className="flex flex-col justify-center mr-22 md:ml-8 text-sm sm:text-base">
                 <p>Quantity: {item.quantity || "1"}</p>
                 <p>Status: {order.status}</p>
                 <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>

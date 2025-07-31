@@ -1,34 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../../context/AppContext";
-import { assets, dummyOrders } from "../../assets/assets";
+import { assets} from "../../assets/assets";
 import toast from "react-hot-toast";
 
 const Orders = () => {
   // Access the currency symbol from global context
-  // const { currency, axios } = useAppContext();
-  const { currency} = useAppContext();
-
+  const { currency, axios } = useAppContext();
+  
   // State to hold list of orders
   const [orders, setOrders] = useState([]);
 
   // Fetch orders data
-  // const fetchOrders = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/order/seller");
-  //     if (data.success) {
-  //       setOrders(data.orders);
-  //     } else {
-  //       toast.error(data.message);
-  //     }
-  //   } catch (error) {
-  //     toast.error(error.message);
-  //   }
-  // };
+  const fetchOrders = async () => {
+    try {
+      const { data } = await axios.get("/api/order/seller");
+      if (data.success) {
+        setOrders(data.orders);
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   // Run fetchOrders once on component mount
   useEffect(() => {
-    // fetchOrders();
-    setOrders(dummyOrders);
+    fetchOrders();
   }, []);
 
   return (
@@ -65,7 +63,7 @@ const Orders = () => {
             </div>
 
             {/* Shipping Address */}
-            <div className="text-sm md:text-base text-black/60 w-full md:w-auto">
+            <div className="text-sm md:text-base text-black/60 w-full md:w-auto md:mr-10">
               <p className="text-black/80 font-medium">
                 {order.address.firstName} {order.address.lastName}
               </p>
@@ -80,7 +78,7 @@ const Orders = () => {
             </div>
 
             {/* Total Amount */}
-            <p className="font-medium text-lg my-auto w-full md:w-auto text-start md:text-center">
+            <p className="font-medium text-lg my-auto w-full md:w-auto text-start md:text-center mr-1">
               {currency}
               {order.amount}
             </p>
