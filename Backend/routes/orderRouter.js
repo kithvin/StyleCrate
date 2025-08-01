@@ -9,6 +9,7 @@ import {
   getAllOrders, // Get all orders (admin/seller view)
   getUserOrders, // Get all orders placed by a specific user
   placeOrderCOD,
+  placeOrderStripe, // Place an order using Cash on Delivery
 } from "../controllers/orderController.js";
 import authSeller from "../middleware/authSeller.js";
 
@@ -24,5 +25,7 @@ orderRouter.get("/user", authUser, getUserOrders);
 // Get all orders - Only accessible by authenticated sellers/admins
 orderRouter.get("/seller", authSeller, getAllOrders);
 
+
+orderRouter.post("/stripe", authUser, placeOrderStripe);
 
 export default orderRouter; // Export the router for use in the main application

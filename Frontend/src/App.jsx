@@ -84,6 +84,7 @@ import AddProduct from "./page/seller/AddProduct";
 import ProductList from "./page/seller/ProductList";
 import Orders from "./page/seller/Orders";
 import { Toaster } from "react-hot-toast";
+import Loading from "./components/Loading";
 
 const App = () => {
   const location = useLocation();
@@ -130,6 +131,7 @@ const App = () => {
           <Route path="/add-address" element={<AddAddress />} />
           <Route path="/products/:category" element={<ProductCategory />} />
           <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="loader" element={<Loading/>}/>
           <Route path="/products/:category/:id" element={<ProductDetails />} />
           <Route path="/deals" element={<ExploreDeals />} />
           <Route path="/contact" element={<Contact />} />
