@@ -50,6 +50,7 @@ app.use("/api/address", addressRouter); // All address-related routes start with
 
 app.use("/api/order", orderRouter); // All order-related routes start with /api/order
 
+
 // Start the server and listen on the defined port
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
