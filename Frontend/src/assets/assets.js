@@ -1,5 +1,5 @@
 import logo from "./logo.png";
-import cart_icon_addtional from "./cart_icon_addtional.png"
+import cart_icon_addtional from "./cart_icon_addtional.png";
 import search_icon from "./search_icon.svg";
 import menu_icon from "./menu_icon.svg";
 import star_icon from "./star_icon.png";
@@ -60,7 +60,7 @@ import kids_shoes_1 from "./kids_shoes_1.jpg";
 import running_shoes_1 from "./running_shoes_1.jpg";
 import leather_loafers_1 from "./leather_loafers_1.jpg";
 import wallet_1 from "./wallet_1.webp";
-import sunglasses_women_1 from "./sunglasses_women_1.jpg"
+import sunglasses_women_1 from "./sunglasses_women_1.jpg";
 import digital_watch_1 from "./digital_watch_1.jpg";
 import scarf_1 from "./scarf_1.webp";
 import tote_bag_1 from "./tote_bag_1.webp";
@@ -71,8 +71,8 @@ import toddler_jogger_1 from "./toddler_jogger_1.avif";
 import kids_pajama_1 from "./kids_pajama_1.avif";
 import kurta_men_1 from "./kurta_men_1.jpg";
 import chikankari_kurti_1 from "./chikankari_kurti_1.png";
-import boys_kurta_set_1 from "./boys_kurta_set_1.webp"
-import girls_lehenga_1 from "./girls_lehenga_1.jpeg"
+import boys_kurta_set_1 from "./boys_kurta_set_1.webp";
+import girls_lehenga_1 from "./girls_lehenga_1.jpeg";
 import silk_saree_1 from "./silk_saree_1.webp";
 import cardigan_women_1 from "./cardigan_women_1.avif";
 import puffer_jacket_men_1 from "./puffer_jacket_men_1.webp";
@@ -168,7 +168,7 @@ export const assets = {
   product_list_icon,
   order_icon,
   upload_area,
-  box_icon
+  box_icon,
 };
 
 // Footer Data
@@ -186,21 +186,21 @@ export const footerLinks = [
   {
     title: "Customer Care",
     links: [
-      { text: "Delivery Information" },
-      { text: "Return & Refund Policy" },
-      { text: "Payment Options" },
-      { text: "Order Help" },
-      { text: "Contact Support" },
+      { text: "24/7 Customer Support" },
+      { text: "Hassle-Free Returns Policy" },
+      { text: "Exclusive Member Discounts" },
+      { text: "Fast & Secure Checkout" },
+      { text: "Personalized Styling Advice" },
     ],
   },
   {
     title: "Connect With Us",
     links: [
-      { text: "Instagram" },
-      { text: "Twitter" },
-      { text: "Facebook" },
-      { text: "YouTube" },
-      { text: "Pinterest" },
+      { text: "Instagram Page" },
+      { text: "Twitter Profile" },
+      { text: "Facebook Page" },
+      { text: "YouTube Channel" },
+      { text: "Pinterest Board" },
     ],
   },
 ];
@@ -210,31 +210,31 @@ export const categories = [
   {
     text: "Men's Fashion",
     path: "Men",
-    image: fashion1, 
+    image: fashion1,
     bgColor: "#fdfefe ",
   },
   {
     text: "Women's Fashion",
     path: "Women",
-    image: fashion2, 
+    image: fashion2,
     bgColor: "#fdfefe ",
   },
   {
     text: "Footwear",
     path: "Footwear",
-    image: fashion3, 
+    image: fashion3,
     bgColor: "#fdfefe ",
   },
   {
     text: "Accessories",
     path: "Accessories",
-    image: fashion4, 
+    image: fashion4,
     bgColor: "#fdfefe ",
   },
   {
     text: "Kids & Babywear",
     path: "Kids",
-    image: fashion5, 
+    image: fashion5,
     bgColor: "#fdfefe ",
   },
   {
@@ -246,7 +246,7 @@ export const categories = [
   {
     text: "Winter Wear",
     path: "Winter",
-    image: fashion7, 
+    image: fashion7,
     bgColor: "#fdfefe ",
   },
 ];
@@ -262,7 +262,9 @@ export const dummyProducts = [
     offerPrice: 1899,
     image: [jeans],
     description: [
-      "Classic blue denim", "Slim fit with stretchable fabric", "Comfortable all-day wear"
+      "Classic blue denim",
+      "Slim fit with stretchable fabric",
+      "Comfortable all-day wear",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -276,7 +278,9 @@ export const dummyProducts = [
     offerPrice: 1350,
     image: [shirt],
     description: [
-      "100% breathable cotton", "Ideal for casual and semi-formal wear", "Regular fit"
+      "100% breathable cotton",
+      "Ideal for casual and semi-formal wear",
+      "Regular fit",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -290,7 +294,9 @@ export const dummyProducts = [
     offerPrice: 699,
     image: [tshirt],
     description: [
-      "Soft cotton fabric", "Trendy graphic design", "Casual weekend essential"
+      "Soft cotton fabric",
+      "Trendy graphic design",
+      "Casual weekend essential",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -304,7 +310,9 @@ export const dummyProducts = [
     offerPrice: 2999,
     image: [blazer],
     description: [
-      "Smart formal look", "Blended fabric for comfort", "Perfect for events and meetings"
+      "Smart formal look",
+      "Blended fabric for comfort",
+      "Perfect for events and meetings",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -318,7 +326,9 @@ export const dummyProducts = [
     offerPrice: 1599,
     image: [cargo],
     description: [
-      "Functional pockets", "Comfortable for travel", "Stretchable fabric"
+      "Functional pockets",
+      "Comfortable for travel",
+      "Stretchable fabric",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -333,7 +343,9 @@ export const dummyProducts = [
     offerPrice: 2499,
     image: [womendress],
     description: [
-      "Flowy and lightweight fabric", "Ideal for summer outings", "Vibrant floral prints"
+      "Flowy and lightweight fabric",
+      "Ideal for summer outings",
+      "Vibrant floral prints",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -347,7 +359,9 @@ export const dummyProducts = [
     offerPrice: 2100,
     image: [women_jeans_1],
     description: [
-      "Stretchable and durable denim", "Perfect for a sleek silhouette", "Available in multiple washes"
+      "Stretchable and durable denim",
+      "Perfect for a sleek silhouette",
+      "Available in multiple washes",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -361,7 +375,9 @@ export const dummyProducts = [
     offerPrice: 1399,
     image: [womentunic1],
     description: [
-      "Elegant floral prints", "Perfect for festive occasions", "Soft rayon fabric"
+      "Elegant floral prints",
+      "Perfect for festive occasions",
+      "Soft rayon fabric",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -375,7 +391,9 @@ export const dummyProducts = [
     offerPrice: 1199,
     image: [pencilskirt],
     description: [
-      "Office-ready formal skirt", "Stretchable and sleek design", "Mid-rise comfort fit"
+      "Office-ready formal skirt",
+      "Stretchable and sleek design",
+      "Mid-rise comfort fit",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -389,13 +407,15 @@ export const dummyProducts = [
     offerPrice: 1900,
     image: [women_hoodie_1],
     description: [
-      "Warm fleece lining", "Trendy relaxed fit", "Great for casual wear"
+      "Warm fleece lining",
+      "Trendy relaxed fit",
+      "Great for casual wear",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
   },
-   // Footwear
+  // Footwear
   {
     _id: "fo01",
     name: "Men’s White Sneakers",
@@ -403,9 +423,7 @@ export const dummyProducts = [
     price: 3200,
     offerPrice: 2899,
     image: [img6],
-    description: [
-      "Stylish and versatile", "Durable sole", "Breathable upper"
-    ],
+    description: ["Stylish and versatile", "Durable sole", "Breathable upper"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -418,7 +436,9 @@ export const dummyProducts = [
     offerPrice: 2200,
     image: [heel_women_1],
     description: [
-      "Elegant ankle strap design", "Perfect for events", "Padded insole"
+      "Elegant ankle strap design",
+      "Perfect for events",
+      "Padded insole",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -431,9 +451,7 @@ export const dummyProducts = [
     price: 1600,
     offerPrice: 1499,
     image: [kids_shoes_1],
-    description: [
-      "Easy to wear", "Durable sole", "Fun design for kids"
-    ],
+    description: ["Easy to wear", "Durable sole", "Fun design for kids"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -446,7 +464,9 @@ export const dummyProducts = [
     offerPrice: 2399,
     image: [running_shoes_1],
     description: [
-      "Shock-absorbing sole", "Ideal for workouts", "Breathable mesh"
+      "Shock-absorbing sole",
+      "Ideal for workouts",
+      "Breathable mesh",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -459,9 +479,7 @@ export const dummyProducts = [
     price: 3000,
     offerPrice: 2750,
     image: [leather_loafers_1],
-    description: [
-      "Premium leather", "Slip-on comfort", "Perfect for office"
-    ],
+    description: ["Premium leather", "Slip-on comfort", "Perfect for office"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -475,7 +493,9 @@ export const dummyProducts = [
     offerPrice: 999,
     image: [wallet_1],
     description: [
-      "Premium leather finish", "Multiple card slots", "Compact and stylish"
+      "Premium leather finish",
+      "Multiple card slots",
+      "Compact and stylish",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -489,7 +509,9 @@ export const dummyProducts = [
     offerPrice: 1299,
     image: [sunglasses_women_1],
     description: [
-      "UV400 protection", "Oversized frames", "Includes storage case"
+      "UV400 protection",
+      "Oversized frames",
+      "Includes storage case",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -502,9 +524,7 @@ export const dummyProducts = [
     price: 2000,
     offerPrice: 1799,
     image: [digital_watch_1],
-    description: [
-      "Backlight display", "Water-resistant", "Long battery life"
-    ],
+    description: ["Backlight display", "Water-resistant", "Long battery life"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -517,7 +537,9 @@ export const dummyProducts = [
     offerPrice: 899,
     image: [scarf_1],
     description: [
-      "Luxurious feel", "Perfect for layering", "Various color options"
+      "Luxurious feel",
+      "Perfect for layering",
+      "Various color options",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -530,9 +552,7 @@ export const dummyProducts = [
     price: 1300,
     offerPrice: 1150,
     image: [tote_bag_1],
-    description: [
-      "Spacious interior", "Eco-friendly", "Trendy design"
-    ],
+    description: ["Spacious interior", "Eco-friendly", "Trendy design"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -545,9 +565,7 @@ export const dummyProducts = [
     price: 1800,
     offerPrice: 1599,
     image: [baby_boy_set_1],
-    description: [
-      "Soft cotton blend", "Cute and colorful", "Comfortable fit"
-    ],
+    description: ["Soft cotton blend", "Cute and colorful", "Comfortable fit"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -560,7 +578,9 @@ export const dummyProducts = [
     offerPrice: 1999,
     image: [party_frock_1],
     description: [
-      "Frilly and fancy", "Perfect for birthdays", "Soft satin fabric"
+      "Frilly and fancy",
+      "Perfect for birthdays",
+      "Soft satin fabric",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -574,7 +594,9 @@ export const dummyProducts = [
     offerPrice: 799,
     image: [romper_1],
     description: [
-      "One-piece comfort", "Snap buttons for easy changing", "Adorable prints"
+      "One-piece comfort",
+      "Snap buttons for easy changing",
+      "Adorable prints",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -587,9 +609,7 @@ export const dummyProducts = [
     price: 1700,
     offerPrice: 1550,
     image: [toddler_jogger_1],
-    description: [
-      "2-piece outfit", "Perfect for playtime", "Warm and soft"
-    ],
+    description: ["2-piece outfit", "Perfect for playtime", "Warm and soft"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -602,7 +622,9 @@ export const dummyProducts = [
     offerPrice: 999,
     image: [kids_pajama_1],
     description: [
-      "Breathable material", "Cute cartoon prints", "All-night comfort"
+      "Breathable material",
+      "Cute cartoon prints",
+      "All-night comfort",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -617,7 +639,9 @@ export const dummyProducts = [
     offerPrice: 1999,
     image: [kurta_men_1],
     description: [
-      "Handcrafted cotton", "Traditional style", "Festive occasions"
+      "Handcrafted cotton",
+      "Traditional style",
+      "Festive occasions",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -630,9 +654,7 @@ export const dummyProducts = [
     price: 2500,
     offerPrice: 2299,
     image: [chikankari_kurti_1],
-    description: [
-      "Elegant embroidery", "Pastel color", "Breathable fabric"
-    ],
+    description: ["Elegant embroidery", "Pastel color", "Breathable fabric"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -645,7 +667,9 @@ export const dummyProducts = [
     offerPrice: 1650,
     image: [boys_kurta_set_1],
     description: [
-      "Includes kurta and pajama", "Traditional design", "Perfect for weddings"
+      "Includes kurta and pajama",
+      "Traditional design",
+      "Perfect for weddings",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -659,7 +683,9 @@ export const dummyProducts = [
     offerPrice: 2899,
     image: [girls_lehenga_1],
     description: [
-      "Colorful and vibrant", "Traditional festive wear", "Comfortable lining"
+      "Colorful and vibrant",
+      "Traditional festive wear",
+      "Comfortable lining",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -673,7 +699,9 @@ export const dummyProducts = [
     offerPrice: 4999,
     image: [silk_saree_1],
     description: [
-      "Pure silk", "Ideal for ceremonies", "Contrast border design"
+      "Pure silk",
+      "Ideal for ceremonies",
+      "Contrast border design",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -687,9 +715,7 @@ export const dummyProducts = [
     price: 2800,
     offerPrice: 2499,
     image: [cardigan_women_1],
-    description: [
-      "Warm knit", "Button closure", "Full sleeves"
-    ],
+    description: ["Warm knit", "Button closure", "Full sleeves"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -702,7 +728,9 @@ export const dummyProducts = [
     offerPrice: 3299,
     image: [puffer_jacket_men_1],
     description: [
-      "Windproof and insulated", "Zipper pockets", "Winter essential"
+      "Windproof and insulated",
+      "Zipper pockets",
+      "Winter essential",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -715,9 +743,7 @@ export const dummyProducts = [
     price: 1600,
     offerPrice: 1450,
     image: [kids_hoodie_1],
-    description: [
-      "Soft fleece", "Warm and cozy", "Fun colors"
-    ],
+    description: ["Soft fleece", "Warm and cozy", "Fun colors"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -730,7 +756,9 @@ export const dummyProducts = [
     offerPrice: 450,
     image: [beanie_hat_1],
     description: [
-      "Stretchable knit", "Unisex design", "Perfect for cold weather"
+      "Stretchable knit",
+      "Unisex design",
+      "Perfect for cold weather",
     ],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
@@ -743,9 +771,7 @@ export const dummyProducts = [
     price: 1400,
     offerPrice: 1299,
     image: [thermal_set_1],
-    description: [
-      "Lightweight insulation", "Base layer comfort", "Unisex fit"
-    ],
+    description: ["Lightweight insulation", "Base layer comfort", "Unisex fit"],
     createdAt: "2025-07-14T03:19:40.000Z",
     updatedAt: "2025-07-14T03:19:40.000Z",
     inStock: true,
@@ -758,7 +784,8 @@ export const features = [
   {
     icon: fashion_icon, // Replace with an icon of a dress or fashion model
     title: "Trendy Collections",
-    description: "Stay ahead with the latest fashion trends curated just for you.",
+    description:
+      "Stay ahead with the latest fashion trends curated just for you.",
   },
   {
     icon: hanger_icon, // Icon of a hanger or closet
