@@ -40,23 +40,30 @@ For Admins
 
 🔧 Installed Dependencies
 
+Note: If an error shows while running the project, install all the necessary dependencies listed below.
+
 Frontend Essentials
-• Tailwind CSS → npm install tailwindcss @tailwindcss/vite
-• React Router → npm install react-router-dom
+
+• React → npm install react
+• React DOM → npm install react-dom
+• React Router DOM → npm install react-router-dom
 • Axios → npm install axios
-• React Icons → npm install react-icons
-• Framer Motion → npm install framer-motion
+• React Hot Toast → npm install react-hot-toast
+• Tailwind CSS → npm install tailwindcss
 
 Backend Core
-• Express → npm install express
-• Mongoose → npm install mongoose
-• JSON Web Tokens → npm install jsonwebtoken
-• Bcrypt → npm install bcrypt
-• Multer → npm install multer
 
-Dev Tools
-• Nodemon → npm install -D nodemon
-• ESLint → npm install -D eslint
+• BcryptJS → npm install bcryptjs
+• Cloudinary → npm install cloudinary
+• Cookie Parser → npm install cookie-parser
+• CORS → npm install cors
+• Dotenv → npm install dotenv
+• Express → npm install express
+• JSON Web Tokens → npm install jsonwebtoken
+• Mongoose → npm install mongoose
+• Multer → npm install multer
+• Nodemailer → npm install nodemailer
+• Stripe → npm install stripe
 
 =============================================================================================================================
 
@@ -71,7 +78,9 @@ cd ../frontend
 npm install
 
 🔐 Environment Configuration
+
 backend/.env
+
 # JWT Secret for signing tokens
 JWT_SECRET=" your_jwt_secret "
 
@@ -108,5 +117,12 @@ VITE_CURRENCY = '$'
 
 # Your Bakcend URL
 VITE_BACKEND_URL =  "your_backedn_url"
+
+=============================================================================================================================
+
+🌐 Deployment
+
+ The project is live and accessible at (Frontend view): (https://style-crate.vercel.app/)
+
 
 =============================================================================================================================
