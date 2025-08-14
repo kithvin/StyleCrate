@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Define allowed origins for CORS
-const allowedOrigins = ["http://localhost:3000","https://stylecrate.vercel.app"];
+const allowedOrigins = ["http://localhost:3000","https://style-crate.vercel.app"];
 
 app.post('/stripe',express.raw({type:'application/jason'}),stripeWebhooks)
 
